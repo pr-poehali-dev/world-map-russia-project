@@ -1,0 +1,20 @@
+{
+  "tests": [
+    {
+      "name": "GET works list",
+      "method": "GET",
+      "path": "/",
+      "expectedStatus": 200,
+      "expectedBody": [],
+      "bodyMatcher": "exact"
+    },
+    {
+      "name": "GET regions returns 200",
+      "method": "GET",
+      "path": "/?action=regions",
+      "expectedStatus": 200,
+      "expectedBody": [{"key": "volga"}],
+      "bodyMatcher": "partial"
+    }
+  ]
+}
